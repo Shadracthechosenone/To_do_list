@@ -5,23 +5,14 @@ export const getAllcategories = async () => {
         const categories = await db.categorie.findMany({
 
             select: {
-                // id: true,
+                id: true,
                 Name: true,
               },
               
             orderBy:{
             createdAt: "desc",
         },
-        /*include :{
-
-            Tache: {
-                select: {
-                id: true,
-                Libelle: true,
-            
-                }
-        }
-        }*/
+     
         }
 ) 
 
